@@ -4,6 +4,7 @@ const app = express();
 app.get("/", (req, res) => res.send("hello, world!"));
 app.get("/:username/messages", (req, res) => {
   console.log(req.params);
+  console.log("Query:", req.query);
   res.end();
 });
 
